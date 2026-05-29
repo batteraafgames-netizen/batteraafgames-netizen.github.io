@@ -2,13 +2,13 @@
 html {
   scroll-behavior: smooth;
 }
-
+ 
 *, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+ 
 body {
   background-color: #0A0E1A;
   color: #F4F8FC;
@@ -16,7 +16,7 @@ body {
   font-weight: 300;
   padding-top: 56px;
 }
-
+ 
 /* ── NAVIGATIE ── */
 nav {
   position: fixed;
@@ -26,25 +26,38 @@ nav {
   z-index: 100;
   background-color: #0A0E1A;
   border-bottom: 1px solid #1E2A3A;
-  padding: 16px 32px;
+  padding: 0 32px;
+  height: 56px;
   display: flex;
   align-items: center;
 }
-
-nav span {
+ 
+nav > span {
   font-family: 'Share Tech Mono', monospace;
   font-size: 18px;
   color: #378ADD;
   letter-spacing: 0.1em;
 }
-
+ 
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #378ADD;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 8px;
+}
+ 
 nav ul {
   list-style: none;
   display: flex;
   gap: 32px;
   margin-left: auto;
+  align-items: center;
 }
-
+ 
 nav ul a {
   font-family: 'Share Tech Mono', monospace;
   font-size: 12px;
@@ -54,65 +67,91 @@ nav ul a {
   text-transform: uppercase;
   transition: color 0.2s ease;
 }
-
+ 
 nav ul a:hover {
   color: #378ADD;
 }
-
+ 
 nav ul li:first-child a {
   font-size: 16px;
   color: #378ADD;
   display: flex;
   align-items: center;
 }
-
+ 
 .accent-letter {
   color: #378ADD;
   font-size: inherit;
   text-transform: inherit;
 }
-
+ 
+.taal-btn {
+  background: none;
+  border: 1px solid #1E2A3A;
+  color: #378ADD;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+ 
+.taal-btn:hover {
+  background: #1E2A3A;
+}
+ 
 /* ── HERO ── */
 #hero {
   background-color: #0A0E1A;
-  padding: 120px 32px;
+  padding: 100px 32px 80px;
   border-bottom: 1px solid #1E2A3A;
 }
-
+ 
+.hero-label {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  color: #4A6A8A;
+  letter-spacing: 0.18em;
+  margin-bottom: 16px;
+}
+ 
 #hero .naam {
   font-family: 'Share Tech Mono', monospace;
-  font-size: 48px;
+  font-size: clamp(28px, 5vw, 56px);
   color: #F4F8FC;
   letter-spacing: 0.05em;
+  line-height: 1;
 }
-
+ 
 #hero .functie {
   font-family: 'Share Tech Mono', monospace;
-  font-size: 14px;
+  font-size: clamp(11px, 1.5vw, 14px);
   color: #378ADD;
   letter-spacing: 0.2em;
   margin-top: 12px;
 }
-
+ 
 /* ── STATS ── */
 .stats {
   display: flex;
-  gap: 48px;
+  gap: 32px;
   margin-top: 48px;
+  flex-wrap: wrap;
 }
-
+ 
 .stat {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
-
+ 
 .stat-getal {
   font-family: 'Share Tech Mono', monospace;
-  font-size: 36px;
+  font-size: clamp(28px, 4vw, 36px);
   color: #F4F8FC;
 }
-
+ 
 .stat-label {
   font-family: 'Share Tech Mono', monospace;
   font-size: 11px;
@@ -120,7 +159,7 @@ nav ul li:first-child a {
   letter-spacing: 0.15em;
   text-transform: uppercase;
 }
-
+ 
 /* ── SECTIE LABEL ── */
 .sectie-label {
   font-family: 'Share Tech Mono', monospace;
@@ -129,87 +168,91 @@ nav ul li:first-child a {
   letter-spacing: 0.2em;
   margin-bottom: 8px;
 }
-
+ 
 /* ── OVER MIJ ── */
 #over-mij {
   padding: 80px 32px;
   background-color: #F4F8FC;
 }
-
+ 
 #over-mij h2 {
   font-family: 'Share Tech Mono', monospace;
-  font-size: 36px;
+  font-size: clamp(28px, 4vw, 36px);
   color: #0A0E1A;
   margin-bottom: 40px;
 }
-
+ 
 .over-mij-grid {
   display: flex;
   gap: 64px;
 }
-
+ 
 .over-mij-tekst {
   flex: 2;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-
+ 
 .over-mij-tekst p {
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
   color: #1E2A3A;
   line-height: 1.8;
 }
-
+ 
 .over-mij-details {
   flex: 1;
   display: flex;
   flex-direction: column;
+  min-width: 220px;
 }
-
+ 
 .detail-rij {
   display: flex;
   justify-content: space-between;
   padding: 12px 0;
   border-bottom: 1px solid #C8DDEF;
+  gap: 16px;
 }
-
+ 
 .detail-key {
   font-family: 'Share Tech Mono', monospace;
   font-size: 11px;
   color: #378ADD;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  flex-shrink: 0;
 }
-
+ 
 .detail-val {
   font-family: 'Roboto', sans-serif;
   font-size: 13px;
   color: #0A0E1A;
   font-weight: 400;
+  text-align: right;
 }
-
+ 
 /* ── WERKERVARING ── */
 #ervaring {
   padding: 80px 32px;
   background-color: #0A0E1A;
 }
-
+ 
 #ervaring h2 {
   font-family: 'Share Tech Mono', monospace;
-  font-size: 36px;
+  font-size: clamp(28px, 4vw, 36px);
   color: #F4F8FC;
   margin-bottom: 40px;
 }
-
+ 
 .tijdlijn {
   display: flex;
   flex-direction: column;
   position: relative;
   padding-left: 48px;
 }
-
+ 
 .tijdlijn::before {
   content: '';
   position: absolute;
@@ -219,7 +262,7 @@ nav ul li:first-child a {
   width: 2px;
   background-color: #1E2A3A;
 }
-
+ 
 .tijdlijn-item {
   display: flex;
   gap: 48px;
@@ -227,7 +270,7 @@ nav ul li:first-child a {
   border-top: 1px solid #1E2A3A;
   position: relative;
 }
-
+ 
 .tijdlijn-item::before {
   content: '';
   position: absolute;
@@ -239,11 +282,11 @@ nav ul li:first-child a {
   background-color: #378ADD;
   border: 2px solid #0A0E1A;
 }
-
+ 
 .tijdlijn-item:last-child {
   border-bottom: 1px solid #1E2A3A;
 }
-
+ 
 .tijdlijn-periode {
   width: 140px;
   flex-shrink: 0;
@@ -255,11 +298,11 @@ nav ul li:first-child a {
   flex-direction: column;
   gap: 8px;
 }
-
+ 
 .tijdlijn-inhoud {
   flex: 1;
 }
-
+ 
 .huidig {
   background-color: #1E2A3A;
   color: #378ADD;
@@ -268,14 +311,14 @@ nav ul li:first-child a {
   letter-spacing: 0.12em;
   width: fit-content;
 }
-
+ 
 .tijdlijn-functie {
   font-family: 'Share Tech Mono', monospace;
-  font-size: 20px;
+  font-size: clamp(16px, 2.5vw, 20px);
   color: #F4F8FC;
   margin-bottom: 6px;
 }
-
+ 
 .tijdlijn-bedrijf {
   font-family: 'Share Tech Mono', monospace;
   font-size: 12px;
@@ -283,94 +326,85 @@ nav ul li:first-child a {
   letter-spacing: 0.1em;
   margin-bottom: 12px;
 }
-
+ 
 .tijdlijn-beschrijving {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   color: #8A9AB0;
   line-height: 1.75;
 }
-
+ 
 /* ── VAARDIGHEDEN ── */
 #vaardigheden {
   padding: 80px 32px;
   background-color: #F4F8FC;
 }
-
+ 
 #vaardigheden h2 {
   font-family: 'Share Tech Mono', monospace;
-  font-size: 36px;
+  font-size: clamp(28px, 4vw, 36px);
   color: #0A0E1A;
   margin-bottom: 40px;
 }
-
+ 
 .vaardig-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px 64px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
 }
-
-.vaardig-item {
+ 
+.vaardig-categorie {
+  border: 1px solid #C8DDEF;
+  padding: 24px;
+}
+ 
+.vaardig-cat-titel {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 12px;
+  color: #378ADD;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #C8DDEF;
+}
+ 
+.vaardig-tags {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 8px;
 }
-
-.vaardig-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-
-.vaardig-naam {
+ 
+.vaardig-tag {
   font-family: 'Share Tech Mono', monospace;
-  font-size: 13px;
+  font-size: 11px;
   color: #0A0E1A;
+  background-color: #E6F1FB;
+  border: 1px solid #C8DDEF;
+  padding: 4px 12px;
   letter-spacing: 0.06em;
 }
-
-.vaardig-pct {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 13px;
-  color: #378ADD;
-}
-
-.vaardig-balk {
-  height: 2px;
-  background-color: #C8DDEF;
-  position: relative;
-}
-
-.vaardig-vulling {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 2px;
-  width: 0%;
-  background-color: #378ADD;
-  transition: width 1.2s ease;
-}
-
+ 
 /* ── OPLEIDING ── */
 #opleiding {
   padding: 80px 32px;
   background-color: #0A0E1A;
 }
-
+ 
 #opleiding h2 {
   font-family: 'Share Tech Mono', monospace;
-  font-size: 36px;
+  font-size: clamp(28px, 4vw, 36px);
   color: #F4F8FC;
   margin-bottom: 40px;
 }
-
+ 
 .opleiding-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   margin-bottom: 48px;
 }
-
+ 
 .opleiding-kaart {
   border: 1px solid #1E2A3A;
   border-left: 3px solid #378ADD;
@@ -379,37 +413,37 @@ nav ul li:first-child a {
   flex-direction: column;
   gap: 8px;
 }
-
+ 
 .opleiding-jaar {
   font-family: 'Share Tech Mono', monospace;
   font-size: 11px;
   color: #378ADD;
   letter-spacing: 0.12em;
 }
-
+ 
 .opleiding-naam {
   font-family: 'Share Tech Mono', monospace;
   font-size: 18px;
   color: #F4F8FC;
 }
-
+ 
 .opleiding-school {
   font-family: 'Roboto', sans-serif;
   font-size: 13px;
   color: #8A9AB0;
 }
-
+ 
 .certificaten-sectie {
   margin-top: 48px;
 }
-
+ 
 .cert-rij {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 16px;
 }
-
+ 
 .cert {
   font-family: 'Share Tech Mono', monospace;
   font-size: 12px;
@@ -417,33 +451,41 @@ nav ul li:first-child a {
   border: 1px solid #1E2A3A;
   padding: 6px 16px;
   letter-spacing: 0.08em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
-
+ 
+.cert-datum {
+  font-size: 10px;
+  color: #4A6A8A;
+}
+ 
 /* ── CONTACT ── */
 #contact {
   padding: 80px 32px;
   background-color: #F4F8FC;
 }
-
+ 
 #contact h2 {
   font-family: 'Share Tech Mono', monospace;
-  font-size: 36px;
+  font-size: clamp(28px, 4vw, 36px);
   color: #0A0E1A;
   margin-bottom: 40px;
 }
-
+ 
 .contact-grid {
   display: flex;
   gap: 64px;
   align-items: center;
 }
-
+ 
 .contact-links {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
-
+ 
 .contact-link {
   display: flex;
   justify-content: space-between;
@@ -454,53 +496,53 @@ nav ul li:first-child a {
   transition: padding-left 0.2s ease;
   color: inherit;
 }
-
+ 
 .contact-link:last-child {
   border-bottom: 1px solid #C8DDEF;
 }
-
+ 
 .contact-link:hover {
   padding-left: 12px;
 }
-
+ 
 .contact-link-links {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
-
+ 
 .contact-label {
   font-family: 'Share Tech Mono', monospace;
   font-size: 10px;
   color: #378ADD;
   letter-spacing: 0.16em;
 }
-
+ 
 .contact-val {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   color: #0A0E1A;
 }
-
+ 
 .contact-pijl {
   font-size: 18px;
   color: #378ADD;
 }
-
+ 
 .contact-tekst {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-
+ 
 .contact-tekst p {
   font-family: 'Share Tech Mono', monospace;
-  font-size: 16px;
+  font-size: clamp(13px, 1.5vw, 16px);
   color: #0A0E1A;
   line-height: 1.8;
 }
-
+ 
 /* ── FOOTER ── */
 footer {
   padding: 24px 32px;
@@ -511,15 +553,146 @@ footer {
   color: #378ADD;
   letter-spacing: 0.12em;
 }
-
+ 
 /* ── SCROLL ANIMATIES ── */
 .verberg {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
-
+ 
 .zichtbaar {
   opacity: 1;
   transform: translateY(0);
 }
+ 
+/* ── MOBIEL ── */
+@media (max-width: 768px) {
+ 
+  body {
+    padding-top: 56px;
+  }
+ 
+  /* Nav mobiel */
+  .menu-toggle {
+    display: block;
+  }
+ 
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    right: 0;
+    background-color: #0A0E1A;
+    border-bottom: 1px solid #1E2A3A;
+    padding: 16px 32px;
+    gap: 16px;
+    margin-left: 0;
+    align-items: flex-start;
+  }
+ 
+  nav ul.open {
+    display: flex;
+  }
+ 
+  /* Hero mobiel */
+  #hero {
+    padding: 60px 20px 50px;
+  }
+ 
+  .stats {
+    gap: 24px;
+  }
+ 
+  /* Over mij mobiel */
+  #over-mij {
+    padding: 60px 20px;
+  }
+ 
+  .over-mij-grid {
+    flex-direction: column;
+    gap: 32px;
+  }
+ 
+  .over-mij-details {
+    min-width: unset;
+  }
+ 
+  /* Werkervaring mobiel */
+  #ervaring {
+    padding: 60px 20px;
+  }
+ 
+  .tijdlijn {
+    padding-left: 32px;
+  }
+ 
+  .tijdlijn-item {
+    flex-direction: column;
+    gap: 12px;
+  }
+ 
+  .tijdlijn-periode {
+    width: auto;
+  }
+ 
+  .tijdlijn-item::before {
+    left: -24px;
+    top: 8px;
+  }
+ 
+  /* Vaardigheden mobiel */
+  #vaardigheden {
+    padding: 60px 20px;
+  }
+ 
+  .vaardig-grid {
+    grid-template-columns: 1fr;
+  }
+ 
+  /* Opleiding mobiel */
+  #opleiding {
+    padding: 60px 20px;
+  }
+ 
+  .opleiding-grid {
+    grid-template-columns: 1fr;
+  }
+ 
+  /* Contact mobiel */
+  #contact {
+    padding: 60px 20px;
+  }
+ 
+  .contact-grid {
+    flex-direction: column;
+    gap: 32px;
+  }
+ 
+  .contact-tekst {
+    order: -1;
+  }
+ 
+  /* Footer mobiel */
+  footer {
+    padding: 20px;
+    font-size: 10px;
+  }
+}
+ 
+@media (max-width: 480px) {
+  #hero .naam {
+    font-size: 22px;
+  }
+ 
+  .stats {
+    gap: 16px;
+  }
+ 
+  .stat-getal {
+    font-size: 24px;
+  }
+}
+ 
