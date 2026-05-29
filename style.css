@@ -598,6 +598,28 @@ nav ul li:first-child a {
 
 .form-submit:hover { background-color: #185FA5; }
 
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-linkedin {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  color: #378ADD;
+  text-decoration: none;
+  letter-spacing: 0.12em;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease;
+}
+
+.footer-linkedin:hover {
+  color: #F4F8FC;
+}
+
 /* ── FOOTER ── */
 footer {
   padding: 24px 32px;
