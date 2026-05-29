@@ -67,4 +67,4 @@ if ('IntersectionObserver' in window) {
 // Fallback — alles zichtbaar na 1 seconde
 setTimeout(() => {
   elementen.forEach(el => el.classList.add('zichtbaar'));
-}, 1000);
+}, 2000);
