@@ -13,6 +13,10 @@
   </head>
   <body>
 
+    <!-- ============================================================ -->
+    <!-- NAVIGATIE                                                     -->
+    <!-- Logo links, menu rechts, CV download knop en taalwisselaar   -->
+    <!-- ============================================================ -->
     <nav>
       <span>JdB</span>
       <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
@@ -26,23 +30,31 @@
         <li><a href="#opleiding"><span class="accent-letter">O</span><span data-nl="pleiding" data-en="pleiding">pleiding</span></a></li>
         <li><a href="#contact"><span class="accent-letter">C</span><span data-nl="ontact" data-en="ontact">ontact</span></a></li>
         <li>
+          <!-- CV download knop — bestand moet jordy-debie-cv.pdf heten op GitHub -->
           <a href="./jordy-debie-cv.pdf" target="_blank" rel="noopener noreferrer" class="download-btn">
             <i class="fa-solid fa-download"></i>
             <span data-nl="CV" data-en="CV">CV</span>
           </a>
         </li>
         <li>
+          <!-- Taalwisselaar knop — JS wisselt tussen NL en EN -->
           <button class="taal-btn" id="taal-btn">EN</button>
         </li>
       </ul>
     </nav>
 
+    <!-- ============================================================ -->
+    <!-- HERO                                                          -->
+    <!-- Eerste grote sectie met naam, functie en statistieken        -->
+    <!-- ============================================================ -->
     <section id="hero">
       <p class="hero-label">&gt; PROCESOPERATOR // GELEEN</p>
       <p class="naam">_JORDY_DE_BIE_</p>
       <p class="functie">
         <span data-nl="&gt; Operator C in opleiding // Beschikbaar" data-en="&gt; Operator C in training // Available">&gt; Operator C in opleiding // Beschikbaar</span>
       </p>
+
+      <!-- Statistieken — jaren en certificaten worden berekend via JS -->
       <div class="stats">
         <div class="stat">
           <span class="stat-getal" id="jaren">--</span>
@@ -59,20 +71,31 @@
       </div>
     </section>
 
+    <!-- ============================================================ -->
+    <!-- OVER MIJ                                                      -->
+    <!-- Foto placeholder, tekst en persoonlijke gegevens             -->
+    <!-- ============================================================ -->
     <section id="over-mij" class="verberg">
       <p class="sectie-label">&gt; <span data-nl="PROFIEL" data-en="PROFILE">PROFIEL</span></p>
       <h2 data-nl="Over mij" data-en="About me">Over mij</h2>
       <div class="over-mij-grid">
+
+        <!-- Foto — vervang de placeholder door een echte foto later -->
+        <!-- Voeg toe: <img src="./foto.jpg" alt="Jordy de Bie"> -->
         <div class="foto-wrapper">
           <div class="foto-placeholder">
             <i class="fa-solid fa-user"></i>
             <p data-nl="Foto volgt" data-en="Photo coming soon">Foto volgt</p>
           </div>
         </div>
+
+        <!-- Profieltekst -->
         <div class="over-mij-tekst">
           <p data-nl="Jordy de Bie is een gedreven procesoperator met ruime ervaring in de farmaceutische en chemische industrie. Hij is werkzaam in ploegendienst en heeft ervaring met het bedienen van installaties zowel in de meetkamer als op de werkvloer." data-en="Jordy de Bie is a driven process operator with extensive experience in the pharmaceutical and chemical industry. He works in shift rotations and has experience operating installations both in the control room and on the shop floor.">Jordy de Bie is een gedreven procesoperator met ruime ervaring in de farmaceutische en chemische industrie. Hij is werkzaam in ploegendienst en heeft ervaring met het bedienen van installaties zowel in de meetkamer als op de werkvloer.</p>
           <p data-nl="Momenteel volgt hij de VAPRO C opleiding via het BBL-traject. Hij werkt nauwkeurig, is stressbestendig en heeft oog voor kwaliteit en veiligheid." data-en="He is currently completing the VAPRO C qualification through the work-based learning programme. He works with precision, handles pressure well and has a keen eye for quality and safety.">Momenteel volgt hij de VAPRO C opleiding via het BBL-traject. Hij werkt nauwkeurig, is stressbestendig en heeft oog voor kwaliteit en veiligheid.</p>
         </div>
+
+        <!-- Persoonlijke gegevens -->
         <div class="over-mij-details">
           <div class="detail-rij">
             <span class="detail-key" data-nl="Woonplaats" data-en="Location">Woonplaats</span>
@@ -99,14 +122,21 @@
             <span class="detail-val">NL · EN · DE</span>
           </div>
         </div>
+
       </div>
     </section>
 
+    <!-- ============================================================ -->
+    <!-- WERKERVARING                                                  -->
+    <!-- Tijdlijn van banen — nieuwste bovenaan                       -->
+    <!-- Voeg een nieuwe baan toe door een tijdlijn-item te kopiëren  -->
+    <!-- ============================================================ -->
     <section id="ervaring">
       <p class="sectie-label">&gt; <span data-nl="LOOPBAAN" data-en="CAREER">LOOPBAAN</span></p>
       <h2 data-nl="Werkervaring" data-en="Work experience">Werkervaring</h2>
       <div class="tijdlijn">
 
+        <!-- BAAN 1 — Huidig -->
         <div class="tijdlijn-item verberg">
           <div class="tijdlijn-periode">
             <span data-nl="juni 2025 — heden" data-en="June 2025 — present">juni 2025 — heden</span>
@@ -119,6 +149,7 @@
           </div>
         </div>
 
+        <!-- BAAN 2 -->
         <div class="tijdlijn-item verberg">
           <div class="tijdlijn-periode">
             <span data-nl="2021 — december 2024" data-en="2021 — December 2024">2021 — december 2024</span>
@@ -130,6 +161,7 @@
           </div>
         </div>
 
+        <!-- BAAN 3 -->
         <div class="tijdlijn-item verberg">
           <div class="tijdlijn-periode">
             <span data-nl="november 2018 — 2021" data-en="November 2018 — 2021">november 2018 — 2021</span>
@@ -141,6 +173,7 @@
           </div>
         </div>
 
+        <!-- BAAN 4 — Stage -->
         <div class="tijdlijn-item verberg">
           <div class="tijdlijn-periode">
             <span data-nl="sept 2017 — juli 2018" data-en="Sept 2017 — July 2018">sept 2017 — juli 2018</span>
@@ -155,10 +188,16 @@
       </div>
     </section>
 
+    <!-- ============================================================ -->
+    <!-- VAARDIGHEDEN                                                  -->
+    <!-- Tags per categorie — voeg toe of verwijder naar wens         -->
+    <!-- ============================================================ -->
     <section id="vaardigheden" class="verberg">
       <p class="sectie-label">&gt; <span data-nl="COMPETENTIES" data-en="COMPETENCIES">COMPETENTIES</span></p>
       <h2 data-nl="Vaardigheden" data-en="Skills">Vaardigheden</h2>
       <div class="vaardig-grid">
+
+        <!-- Technische vaardigheden -->
         <div class="vaardig-categorie">
           <p class="vaardig-cat-titel" data-nl="Technisch" data-en="Technical">Technisch</p>
           <div class="vaardig-tags">
@@ -171,6 +210,8 @@
             <span class="vaardig-tag" data-nl="Werkinstructies opstellen" data-en="Writing work instructions">Werkinstructies opstellen</span>
           </div>
         </div>
+
+        <!-- Computervaardigheden -->
         <div class="vaardig-categorie">
           <p class="vaardig-cat-titel" data-nl="Computer" data-en="Computer">Computer</p>
           <div class="vaardig-tags">
@@ -179,6 +220,8 @@
             <span class="vaardig-tag">Microsoft PowerPoint</span>
           </div>
         </div>
+
+        <!-- Persoonlijke vaardigheden -->
         <div class="vaardig-categorie">
           <p class="vaardig-cat-titel" data-nl="Persoonlijk" data-en="Personal">Persoonlijk</p>
           <div class="vaardig-tags">
@@ -189,29 +232,44 @@
             <span class="vaardig-tag" data-nl="Leergierig" data-en="Eager to learn">Leergierig</span>
           </div>
         </div>
+
       </div>
     </section>
 
+    <!-- ============================================================ -->
+    <!-- OPLEIDING & CERTIFICATEN                                      -->
+    <!-- Opleidingskaarten en certificaten met vervaldatum            -->
+    <!-- ============================================================ -->
     <section id="opleiding">
       <p class="sectie-label">&gt; <span data-nl="ACHTERGROND" data-en="BACKGROUND">ACHTERGROND</span></p>
       <h2 data-nl="Opleiding" data-en="Education">Opleiding</h2>
       <div class="opleiding-grid">
+
+        <!-- OPLEIDING 1 — Huidig -->
         <div class="opleiding-kaart verberg">
           <div class="opleiding-jaar">2022 — <span data-nl="heden" data-en="present">heden</span></div>
           <div class="opleiding-naam">VAPRO C</div>
           <div class="opleiding-school" data-nl="BBL via Ioniqa / Basic Pharma · Vistacollege" data-en="Work-based learning via Ioniqa / Basic Pharma · Vistacollege">BBL via Ioniqa / Basic Pharma · Vistacollege</div>
         </div>
+
+        <!-- OPLEIDING 2 -->
         <div class="opleiding-kaart verberg">
           <div class="opleiding-jaar">2014 — 2018</div>
           <div class="opleiding-naam">VAPRO B</div>
           <div class="opleiding-school">Arcus College · Heerlen</div>
         </div>
+
+        <!-- OPLEIDING 3 -->
         <div class="opleiding-kaart verberg">
           <div class="opleiding-jaar">2010 — 2014</div>
           <div class="opleiding-naam">VMBO-T</div>
           <div class="opleiding-school">Broekland College · Hoensbroek</div>
         </div>
+
       </div>
+
+      <!-- Certificaten — voeg toe of verwijder naar wens -->
+      <!-- cert-datum = vervaldatum van het certificaat   -->
       <div class="certificaten-sectie verberg">
         <p class="sectie-label">&gt; <span data-nl="CERTIFICATEN" data-en="CERTIFICATES">CERTIFICATEN</span></p>
         <div class="cert-rij">
@@ -222,59 +280,74 @@
       </div>
     </section>
 
-    <section id="contact" class="verberg">
-      <p class="sectie-label">&gt; <span data-nl="BEREIKBAAR" data-en="GET IN TOUCH">BEREIKBAAR</span></p>
-      <h2 data-nl="Stuur een bericht" data-en="Send a message">Stuur een bericht</h2>
-      <div class="contact-grid">
-        <div class="contact-info">
-          <p class="contact-intro" data-nl="Op zoek naar een procesoperator met aantoonbare ervaring in de farmaceutische en chemische industrie? Vul het formulier in — ik reageer snel." data-en="Looking for a process operator with proven experience in the pharmaceutical and chemical industry? Fill in the form — I respond quickly.">Op zoek naar een procesoperator met aantoonbare ervaring in de farmaceutische en chemische industrie? Vul het formulier in — ik reageer snel.</p>
-          <div class="contact-details">
-            <div class="contact-detail-rij">
-              <span class="contact-label">E-MAIL</span>
-              <span class="contact-val">jordy.debie@hotmail.com</span>
-            </div>
-            <div class="contact-detail-rij">
-              <span class="contact-label" data-nl="LOCATIE" data-en="LOCATION">LOCATIE</span>
-              <span class="contact-val">Heerlen, Nederland</span>
-            </div>
-            <div class="contact-detail-rij">
-              <span class="contact-label">LINKEDIN</span>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="linkedin-link">
-                <i class="fa-brands fa-linkedin"></i>
-                <span data-nl="Bekijk profiel" data-en="View profile">Bekijk profiel</span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+<!-- ============================================================ -->
+<!-- CONTACT                                                       -->
+<!-- Formulier dat e-mail stuurt via EmailJS                       -->
+<!-- ============================================================ -->
+<section id="contact" class="verberg">
+  <p class="sectie-label">&gt; <span data-nl="BEREIKBAAR" data-en="GET IN TOUCH">BEREIKBAAR</span></p>
+  <h2 data-nl="Stuur een bericht" data-en="Send a message">Stuur een bericht</h2>
+
+  <p class="contact-intro" data-nl="Op zoek naar een procesoperator met aantoonbare ervaring in de farmaceutische en chemische industrie? Vul het formulier in — ik reageer snel." data-en="Looking for a process operator with proven experience in the pharmaceutical and chemical industry? Fill in the form — I respond quickly.">Op zoek naar een procesoperator met aantoonbare ervaring in de farmaceutische en chemische industrie? Vul het formulier in — ik reageer snel.</p>
+
+  <!-- Contactformulier — verstuurt via EmailJS -->
+  <form class="contact-form" id="contact-form">
+    <div class="form-groep">
+      <label data-nl="Naam" data-en="Name">Naam</label>
+      <input type="text" name="name" required placeholder="Jouw naam">
+    </div>
+    <div class="form-groep">
+      <label>E-mail</label>
+      <input type="email" name="email" required placeholder="jouw@email.nl">
+    </div>
+    <div class="form-groep">
+      <label data-nl="Bericht" data-en="Message">Bericht</label>
+      <textarea name="message" rows="5" required placeholder="Jouw bericht..."></textarea>
+    </div>
+    <button type="submit" class="form-submit">
+      <span data-nl="Verstuur bericht" data-en="Send message">Verstuur bericht</span>
+      <i class="fa-solid fa-paper-plane"></i>
+    </button>
+  </form>
+
+</section>
+        <!-- Contactformulier rechts — verstuurt via EmailJS -->
+        <!-- name="name" en name="message" moeten overeenkomen met EmailJS template -->
+        <form class="contact-form" id="contact-form">
           <div class="form-groep">
             <label data-nl="Naam" data-en="Name">Naam</label>
-            <input type="text" name="naam" required placeholder="Jouw naam">
+            <input type="text" name="name" required placeholder="Jouw naam">
           </div>
           <div class="form-groep">
             <label>E-mail</label>
             <input type="email" name="email" required placeholder="jouw@email.nl">
           </div>
           <div class="form-groep">
-            <label data-nl="Bedrijf (optioneel)" data-en="Company (optional)">Bedrijf (optioneel)</label>
-            <input type="text" name="bedrijf" placeholder="Bedrijfsnaam">
-          </div>
-          <div class="form-groep">
             <label data-nl="Bericht" data-en="Message">Bericht</label>
-            <textarea name="bericht" rows="5" required placeholder="Jouw bericht..."></textarea>
+            <textarea name="message" rows="5" required placeholder="Jouw bericht..."></textarea>
           </div>
           <button type="submit" class="form-submit">
             <span data-nl="Verstuur bericht" data-en="Send message">Verstuur bericht</span>
             <i class="fa-solid fa-paper-plane"></i>
           </button>
         </form>
+
       </div>
     </section>
 
+<!-- ============================================================ -->
+    <!-- FOOTER                                                        -->
+    <!-- Jaar wordt automatisch bijgewerkt via JS                     -->
+    <!-- ============================================================ -->
     <footer>
       <span>&gt; Jordy de Bie · <span data-nl="Procesoperator" data-en="Process Operator">Procesoperator</span> · Heerlen · <span id="jaar"></span></span>
+      <a href="https://www.linkedin.com/in/jordy-de-bie-991711146" target="_blank" rel="noopener noreferrer" class="footer-linkedin">
+        <i class="fa-brands fa-linkedin"></i>
+        LinkedIn
+      </a>
     </footer>
 
+    <!-- Terug naar boven knop — verschijnt na 400px scrollen -->
     <button class="naar-boven" id="naar-boven" aria-label="Terug naar boven">
       <i class="fa-solid fa-chevron-up"></i>
     </button>
