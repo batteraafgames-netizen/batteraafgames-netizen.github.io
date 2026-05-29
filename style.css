@@ -558,7 +558,7 @@ footer {
 .verberg {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition: opacity 2.0s ease, transform 2.0s ease;
 }
  
 .zichtbaar {
