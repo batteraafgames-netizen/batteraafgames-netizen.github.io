@@ -1,14 +1,7 @@
 /* ── BASIS ── */
-html {
-  scroll-behavior: smooth;
-}
- 
-*, *::before, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
- 
+html { scroll-behavior: smooth; }
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
 body {
   background-color: #0A0E1A;
   color: #F4F8FC;
@@ -16,13 +9,11 @@ body {
   font-weight: 300;
   padding-top: 56px;
 }
- 
+
 /* ── NAVIGATIE ── */
 nav {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   z-index: 100;
   background-color: #0A0E1A;
   border-bottom: 1px solid #1E2A3A;
@@ -31,14 +22,14 @@ nav {
   display: flex;
   align-items: center;
 }
- 
+
 nav > span {
   font-family: 'Share Tech Mono', monospace;
   font-size: 18px;
   color: #378ADD;
   letter-spacing: 0.1em;
 }
- 
+
 .menu-toggle {
   display: none;
   background: none;
@@ -49,15 +40,15 @@ nav > span {
   margin-left: auto;
   padding: 8px;
 }
- 
+
 nav ul {
   list-style: none;
   display: flex;
-  gap: 32px;
+  gap: 24px;
   margin-left: auto;
   align-items: center;
 }
- 
+
 nav ul a {
   font-family: 'Share Tech Mono', monospace;
   font-size: 12px;
@@ -67,24 +58,41 @@ nav ul a {
   text-transform: uppercase;
   transition: color 0.2s ease;
 }
- 
-nav ul a:hover {
-  color: #378ADD;
-}
- 
+
+nav ul a:hover { color: #378ADD; }
+
 nav ul li:first-child a {
   font-size: 16px;
   color: #378ADD;
   display: flex;
   align-items: center;
 }
- 
+
 .accent-letter {
   color: #378ADD;
   font-size: inherit;
   text-transform: inherit;
 }
- 
+
+.download-btn {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  color: #0A0E1A !important;
+  background-color: #378ADD;
+  padding: 5px 12px;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.download-btn:hover {
+  background-color: #185FA5;
+  color: #F4F8FC !important;
+}
+
 .taal-btn {
   background: none;
   border: 1px solid #1E2A3A;
@@ -96,18 +104,16 @@ nav ul li:first-child a {
   cursor: pointer;
   transition: all 0.2s ease;
 }
- 
-.taal-btn:hover {
-  background: #1E2A3A;
-}
- 
+
+.taal-btn:hover { background: #1E2A3A; }
+
 /* ── HERO ── */
 #hero {
   background-color: #0A0E1A;
   padding: 100px 32px 80px;
   border-bottom: 1px solid #1E2A3A;
 }
- 
+
 .hero-label {
   font-family: 'Share Tech Mono', monospace;
   font-size: 11px;
@@ -115,7 +121,7 @@ nav ul li:first-child a {
   letter-spacing: 0.18em;
   margin-bottom: 16px;
 }
- 
+
 #hero .naam {
   font-family: 'Share Tech Mono', monospace;
   font-size: clamp(28px, 5vw, 56px);
@@ -123,7 +129,7 @@ nav ul li:first-child a {
   letter-spacing: 0.05em;
   line-height: 1;
 }
- 
+
 #hero .functie {
   font-family: 'Share Tech Mono', monospace;
   font-size: clamp(11px, 1.5vw, 14px);
@@ -131,7 +137,7 @@ nav ul li:first-child a {
   letter-spacing: 0.2em;
   margin-top: 12px;
 }
- 
+
 /* ── STATS ── */
 .stats {
   display: flex;
@@ -139,19 +145,15 @@ nav ul li:first-child a {
   margin-top: 48px;
   flex-wrap: wrap;
 }
- 
-.stat {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
- 
+
+.stat { display: flex; flex-direction: column; gap: 6px; }
+
 .stat-getal {
   font-family: 'Share Tech Mono', monospace;
   font-size: clamp(28px, 4vw, 36px);
   color: #F4F8FC;
 }
- 
+
 .stat-label {
   font-family: 'Share Tech Mono', monospace;
   font-size: 11px;
@@ -159,7 +161,7 @@ nav ul li:first-child a {
   letter-spacing: 0.15em;
   text-transform: uppercase;
 }
- 
+
 /* ── SECTIE LABEL ── */
 .sectie-label {
   font-family: 'Share Tech Mono', monospace;
@@ -168,46 +170,78 @@ nav ul li:first-child a {
   letter-spacing: 0.2em;
   margin-bottom: 8px;
 }
- 
+
 /* ── OVER MIJ ── */
 #over-mij {
   padding: 80px 32px;
   background-color: #F4F8FC;
 }
- 
+
 #over-mij h2 {
   font-family: 'Share Tech Mono', monospace;
   font-size: clamp(28px, 4vw, 36px);
   color: #0A0E1A;
   margin-bottom: 40px;
 }
- 
+
 .over-mij-grid {
-  display: flex;
-  gap: 64px;
+  display: grid;
+  grid-template-columns: 200px 1fr 280px;
+  gap: 40px;
+  align-items: start;
 }
- 
+
+.foto-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.foto-placeholder {
+  width: 180px;
+  height: 220px;
+  border: 2px dashed #C8DDEF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #378ADD;
+}
+
+.foto-placeholder i { font-size: 48px; opacity: 0.4; }
+
+.foto-placeholder p {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: #8A9AB0;
+}
+
+/* Als je een echte foto wil toevoegen later: */
+.foto-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .over-mij-tekst {
-  flex: 2;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
- 
+
 .over-mij-tekst p {
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
   color: #1E2A3A;
   line-height: 1.8;
 }
- 
+
 .over-mij-details {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  min-width: 220px;
 }
- 
+
 .detail-rij {
   display: flex;
   justify-content: space-between;
@@ -215,7 +249,7 @@ nav ul li:first-child a {
   border-bottom: 1px solid #C8DDEF;
   gap: 16px;
 }
- 
+
 .detail-key {
   font-family: 'Share Tech Mono', monospace;
   font-size: 11px;
@@ -224,7 +258,7 @@ nav ul li:first-child a {
   text-transform: uppercase;
   flex-shrink: 0;
 }
- 
+
 .detail-val {
   font-family: 'Roboto', sans-serif;
   font-size: 13px;
@@ -232,27 +266,24 @@ nav ul li:first-child a {
   font-weight: 400;
   text-align: right;
 }
- 
+
 /* ── WERKERVARING ── */
-#ervaring {
-  padding: 80px 32px;
-  background-color: #0A0E1A;
-}
- 
+#ervaring { padding: 80px 32px; background-color: #0A0E1A; }
+
 #ervaring h2 {
   font-family: 'Share Tech Mono', monospace;
   font-size: clamp(28px, 4vw, 36px);
   color: #F4F8FC;
   margin-bottom: 40px;
 }
- 
+
 .tijdlijn {
   display: flex;
   flex-direction: column;
   position: relative;
   padding-left: 48px;
 }
- 
+
 .tijdlijn::before {
   content: '';
   position: absolute;
@@ -262,7 +293,7 @@ nav ul li:first-child a {
   width: 2px;
   background-color: #1E2A3A;
 }
- 
+
 .tijdlijn-item {
   display: flex;
   gap: 48px;
@@ -270,7 +301,7 @@ nav ul li:first-child a {
   border-top: 1px solid #1E2A3A;
   position: relative;
 }
- 
+
 .tijdlijn-item::before {
   content: '';
   position: absolute;
@@ -282,27 +313,23 @@ nav ul li:first-child a {
   background-color: #378ADD;
   border: 2px solid #0A0E1A;
 }
- 
-.tijdlijn-item:last-child {
-  border-bottom: 1px solid #1E2A3A;
-}
- 
+
+.tijdlijn-item:last-child { border-bottom: 1px solid #1E2A3A; }
+
 .tijdlijn-periode {
-  width: 140px;
+  width: 160px;
   flex-shrink: 0;
   font-family: 'Share Tech Mono', monospace;
   font-size: 12px;
   color: #378ADD;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
- 
-.tijdlijn-inhoud {
-  flex: 1;
-}
- 
+
+.tijdlijn-inhoud { flex: 1; }
+
 .huidig {
   background-color: #1E2A3A;
   color: #378ADD;
@@ -311,14 +338,14 @@ nav ul li:first-child a {
   letter-spacing: 0.12em;
   width: fit-content;
 }
- 
+
 .tijdlijn-functie {
   font-family: 'Share Tech Mono', monospace;
   font-size: clamp(16px, 2.5vw, 20px);
   color: #F4F8FC;
   margin-bottom: 6px;
 }
- 
+
 .tijdlijn-bedrijf {
   font-family: 'Share Tech Mono', monospace;
   font-size: 12px;
@@ -326,38 +353,35 @@ nav ul li:first-child a {
   letter-spacing: 0.1em;
   margin-bottom: 12px;
 }
- 
+
 .tijdlijn-beschrijving {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   color: #8A9AB0;
   line-height: 1.75;
 }
- 
+
 /* ── VAARDIGHEDEN ── */
-#vaardigheden {
-  padding: 80px 32px;
-  background-color: #F4F8FC;
-}
- 
+#vaardigheden { padding: 80px 32px; background-color: #F4F8FC; }
+
 #vaardigheden h2 {
   font-family: 'Share Tech Mono', monospace;
   font-size: clamp(28px, 4vw, 36px);
   color: #0A0E1A;
   margin-bottom: 40px;
 }
- 
+
 .vaardig-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
- 
+
 .vaardig-categorie {
   border: 1px solid #C8DDEF;
   padding: 24px;
 }
- 
+
 .vaardig-cat-titel {
   font-family: 'Share Tech Mono', monospace;
   font-size: 12px;
@@ -368,13 +392,9 @@ nav ul li:first-child a {
   padding-bottom: 12px;
   border-bottom: 1px solid #C8DDEF;
 }
- 
-.vaardig-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
- 
+
+.vaardig-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+
 .vaardig-tag {
   font-family: 'Share Tech Mono', monospace;
   font-size: 11px;
@@ -384,27 +404,24 @@ nav ul li:first-child a {
   padding: 4px 12px;
   letter-spacing: 0.06em;
 }
- 
+
 /* ── OPLEIDING ── */
-#opleiding {
-  padding: 80px 32px;
-  background-color: #0A0E1A;
-}
- 
+#opleiding { padding: 80px 32px; background-color: #0A0E1A; }
+
 #opleiding h2 {
   font-family: 'Share Tech Mono', monospace;
   font-size: clamp(28px, 4vw, 36px);
   color: #F4F8FC;
   margin-bottom: 40px;
 }
- 
+
 .opleiding-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   margin-bottom: 48px;
 }
- 
+
 .opleiding-kaart {
   border: 1px solid #1E2A3A;
   border-left: 3px solid #378ADD;
@@ -413,37 +430,35 @@ nav ul li:first-child a {
   flex-direction: column;
   gap: 8px;
 }
- 
+
 .opleiding-jaar {
   font-family: 'Share Tech Mono', monospace;
   font-size: 11px;
   color: #378ADD;
   letter-spacing: 0.12em;
 }
- 
+
 .opleiding-naam {
   font-family: 'Share Tech Mono', monospace;
   font-size: 18px;
   color: #F4F8FC;
 }
- 
+
 .opleiding-school {
   font-family: 'Roboto', sans-serif;
   font-size: 13px;
   color: #8A9AB0;
 }
- 
-.certificaten-sectie {
-  margin-top: 48px;
-}
- 
+
+.certificaten-sectie { margin-top: 48px; }
+
 .cert-rij {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 16px;
 }
- 
+
 .cert {
   font-family: 'Share Tech Mono', monospace;
   font-size: 12px;
@@ -455,94 +470,134 @@ nav ul li:first-child a {
   align-items: center;
   gap: 8px;
 }
- 
-.cert-datum {
-  font-size: 10px;
-  color: #4A6A8A;
-}
- 
+
+.cert-datum { font-size: 10px; color: #4A6A8A; }
+
 /* ── CONTACT ── */
-#contact {
-  padding: 80px 32px;
-  background-color: #F4F8FC;
-}
- 
+#contact { padding: 80px 32px; background-color: #F4F8FC; }
+
 #contact h2 {
   font-family: 'Share Tech Mono', monospace;
   font-size: clamp(28px, 4vw, 36px);
   color: #0A0E1A;
   margin-bottom: 40px;
 }
- 
+
 .contact-grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
   gap: 64px;
-  align-items: center;
+  align-items: start;
 }
- 
-.contact-links {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+
+.contact-intro {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  color: #1E2A3A;
+  line-height: 1.8;
+  margin-bottom: 32px;
 }
- 
-.contact-link {
+
+.contact-details { display: flex; flex-direction: column; }
+
+.contact-detail-rij {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 0;
-  border-top: 1px solid #C8DDEF;
-  text-decoration: none;
-  transition: padding-left 0.2s ease;
-  color: inherit;
-}
- 
-.contact-link:last-child {
+  padding: 12px 0;
   border-bottom: 1px solid #C8DDEF;
+  gap: 16px;
 }
- 
-.contact-link:hover {
-  padding-left: 12px;
-}
- 
-.contact-link-links {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
- 
+
 .contact-label {
   font-family: 'Share Tech Mono', monospace;
   font-size: 10px;
   color: #378ADD;
   letter-spacing: 0.16em;
+  flex-shrink: 0;
 }
- 
+
 .contact-val {
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  color: #0A0E1A;
+}
+
+.linkedin-link {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 12px;
+  color: #378ADD;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease;
+}
+
+.linkedin-link:hover { color: #185FA5; }
+
+/* Contactformulier */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-groep {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-groep label {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  color: #378ADD;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.form-groep input,
+.form-groep textarea {
+  background: #fff;
+  border: 1px solid #C8DDEF;
+  padding: 10px 14px;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   color: #0A0E1A;
+  outline: none;
+  transition: border-color 0.2s ease;
+  resize: vertical;
 }
- 
-.contact-pijl {
-  font-size: 18px;
-  color: #378ADD;
+
+.form-groep input:focus,
+.form-groep textarea:focus {
+  border-color: #378ADD;
 }
- 
-.contact-tekst {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+
+.form-groep input::placeholder,
+.form-groep textarea::placeholder {
+  color: #8A9AB0;
 }
- 
-.contact-tekst p {
+
+.form-submit {
   font-family: 'Share Tech Mono', monospace;
-  font-size: clamp(13px, 1.5vw, 16px);
-  color: #0A0E1A;
-  line-height: 1.8;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: #F4F8FC;
+  background-color: #378ADD;
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s ease;
+  align-self: flex-start;
 }
- 
+
+.form-submit:hover { background-color: #185FA5; }
+
 /* ── FOOTER ── */
 footer {
   padding: 24px 32px;
@@ -553,38 +608,65 @@ footer {
   color: #378ADD;
   letter-spacing: 0.12em;
 }
- 
+
+/* ── NAAR BOVEN KNOP ── */
+.naar-boven {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 40px;
+  height: 40px;
+  background-color: #378ADD;
+  color: #F4F8FC;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 99;
+}
+
+.naar-boven.zichtbaar-knop {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.naar-boven:hover { background-color: #185FA5; }
+
 /* ── SCROLL ANIMATIES ── */
 .verberg {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 2.0s ease, transform 2.0s ease;
+  transform: translateY(40px);
+  transition: opacity 1.4s ease, transform 1.4s ease;
 }
- 
+
 .zichtbaar {
   opacity: 1;
   transform: translateY(0);
 }
- 
+
 /* ── MOBIEL ── */
+@media (max-width: 900px) {
+  .over-mij-grid {
+    grid-template-columns: 1fr;
+  }
+  .foto-wrapper { display: none; }
+  .vaardig-grid { grid-template-columns: 1fr; }
+  .opleiding-grid { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 768px) {
- 
-  body {
-    padding-top: 56px;
-  }
- 
-  /* Nav mobiel */
-  .menu-toggle {
-    display: block;
-  }
- 
+  .menu-toggle { display: block; }
+
   nav ul {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 56px;
-    left: 0;
-    right: 0;
+    top: 56px; left: 0; right: 0;
     background-color: #0A0E1A;
     border-bottom: 1px solid #1E2A3A;
     padding: 16px 32px;
@@ -592,107 +674,30 @@ footer {
     margin-left: 0;
     align-items: flex-start;
   }
- 
-  nav ul.open {
-    display: flex;
-  }
- 
-  /* Hero mobiel */
-  #hero {
-    padding: 60px 20px 50px;
-  }
- 
-  .stats {
-    gap: 24px;
-  }
- 
-  /* Over mij mobiel */
-  #over-mij {
-    padding: 60px 20px;
-  }
- 
-  .over-mij-grid {
-    flex-direction: column;
-    gap: 32px;
-  }
- 
-  .over-mij-details {
-    min-width: unset;
-  }
- 
-  /* Werkervaring mobiel */
-  #ervaring {
-    padding: 60px 20px;
-  }
- 
-  .tijdlijn {
-    padding-left: 32px;
-  }
- 
-  .tijdlijn-item {
-    flex-direction: column;
-    gap: 12px;
-  }
- 
-  .tijdlijn-periode {
-    width: auto;
-  }
- 
-  .tijdlijn-item::before {
-    left: -24px;
-    top: 8px;
-  }
- 
-  /* Vaardigheden mobiel */
-  #vaardigheden {
-    padding: 60px 20px;
-  }
- 
-  .vaardig-grid {
-    grid-template-columns: 1fr;
-  }
- 
-  /* Opleiding mobiel */
-  #opleiding {
-    padding: 60px 20px;
-  }
- 
-  .opleiding-grid {
-    grid-template-columns: 1fr;
-  }
- 
-  /* Contact mobiel */
-  #contact {
-    padding: 60px 20px;
-  }
- 
-  .contact-grid {
-    flex-direction: column;
-    gap: 32px;
-  }
- 
-  .contact-tekst {
-    order: -1;
-  }
- 
-  /* Footer mobiel */
-  footer {
-    padding: 20px;
-    font-size: 10px;
-  }
+
+  nav ul.open { display: flex; }
+
+  #hero { padding: 60px 20px 50px; }
+  #over-mij { padding: 60px 20px; }
+  #ervaring { padding: 60px 20px; }
+  #vaardigheden { padding: 60px 20px; }
+  #opleiding { padding: 60px 20px; }
+  #contact { padding: 60px 20px; }
+  footer { padding: 20px; font-size: 10px; }
+
+  .stats { gap: 24px; }
+
+  .tijdlijn { padding-left: 32px; }
+  .tijdlijn-item { flex-direction: column; gap: 12px; }
+  .tijdlijn-periode { width: auto; }
+  .tijdlijn-item::before { left: -24px; top: 8px; }
+
+  .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+
+  .naar-boven { bottom: 20px; right: 20px; }
 }
- 
+
 @media (max-width: 480px) {
-  #hero .naam {
-    font-size: 22px;
-  }
- 
-  .stats {
-    gap: 16px;
-  }
- 
-  .stat-getal {
-    font-size: 24px;
-  }
+  #hero .naam { font-size: 22px; }
+  .stat-getal { font-size: 24px; }
 }
- 
