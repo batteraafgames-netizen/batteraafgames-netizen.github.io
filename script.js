@@ -1,27 +1,54 @@
+/ ── TAAL SYSTEEM ──
+let huidige_taal = 'nl';
+ 
+function wisselTaal() {
+  huidige_taal = huidige_taal === 'nl' ? 'en' : 'nl';
+  const knop = document.getElementById('taal-btn');
+  if (knop) knop.textContent = huidige_taal === 'nl' ? 'EN' : 'NL';
+ 
+  const elementen = document.querySelectorAll('[data-nl]');
+  elementen.forEach(el => {
+    const tekst = el.getAttribute('data-' + huidige_taal);
+    if (tekst) el.textContent = tekst;
+  });
+ 
+  document.documentElement.lang = huidige_taal;
+}
+ 
+const taalKnop = document.getElementById('taal-btn');
+if (taalKnop) taalKnop.addEventListener('click', wisselTaal);
+ 
+// ── MOBIEL MENU ──
+const menuKnop = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+ 
+if (menuKnop && navLinks) {
+  menuKnop.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+ 
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+    });
+  });
+}
+ 
 // ── STATS ──
-const startJaar = 2015;
+const startJaar = 2018;
 const huidigJaar = new Date().getFullYear();
-
+ 
 const jarenEl = document.getElementById('jaren');
 const certEl = document.getElementById('certificaten');
-const processenEl = document.getElementById('processen');
 const jaarEl = document.getElementById('jaar');
-
+ 
 if (jarenEl) jarenEl.textContent = huidigJaar - startJaar;
-if (certEl) certEl.textContent = 6;
-if (processenEl) processenEl.textContent = '25+';
+if (certEl) certEl.textContent = 3;
 if (jaarEl) jaarEl.textContent = huidigJaar;
-
-// ── VAARDIGHEIDSBALKEN ──
-const balken = document.querySelectorAll('.vaardig-vulling');
-balken.forEach(balk => {
-  const breedte = balk.dataset.breedte;
-  if (breedte) balk.style.width = breedte + '%';
-});
-
+ 
 // ── SCROLL ANIMATIES ──
 const elementen = document.querySelectorAll('.verberg');
-
+ 
 if ('IntersectionObserver' in window) {
   const waarnemer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -30,8 +57,8 @@ if ('IntersectionObserver' in window) {
         waarnemer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.15 });
-
+  }, { threshold: 0.1 });
+ 
   elementen.forEach(el => waarnemer.observe(el));
 } else {
   elementen.forEach(el => el.classList.add('zichtbaar'));
