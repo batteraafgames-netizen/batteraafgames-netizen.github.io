@@ -84,3 +84,28 @@ if (naarBovenKnop) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
+// ── EMAILJS ──
+emailjs.init('qhg1JVEghAVsWRVJQ');
+
+const form = document.getElementById('contact-form');
+if (form) {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const knop = form.querySelector('.form-submit');
+    knop.textContent = 'Versturen...';
+    knop.disabled = true;
+
+    emailjs.sendForm('service_ugp48lo', 'template_qv47dqn', form)
+      .then(() => {
+        knop.textContent = '✓ Verstuurd!';
+        knop.style.backgroundColor = '#1D9E75';
+        form.reset();
+      })
+      .catch(() => {
+        knop.textContent = '✗ Fout — probeer opnieuw';
+        knop.style.backgroundColor = '#C0392B';
+        knop.disabled = false;
+      });
+  });
+}
