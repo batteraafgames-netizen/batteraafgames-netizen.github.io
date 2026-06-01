@@ -109,7 +109,7 @@ nav ul li:first-child a {
 
 /* ── HERO ── */
 #hero {
-  background-color: #0A0E1A;
+  background-color: #F4F8FC;
   padding: 100px 32px 80px;
   border-bottom: 1px solid #1E2A3A;
 }
@@ -125,7 +125,7 @@ nav ul li:first-child a {
 #hero .naam {
   font-family: 'Share Tech Mono', monospace;
   font-size: clamp(28px, 5vw, 56px);
-  color: #F4F8FC;
+  color: #0A0E1A;
   letter-spacing: 0.05em;
   line-height: 1;
 }
