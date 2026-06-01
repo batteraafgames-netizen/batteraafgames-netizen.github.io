@@ -151,7 +151,7 @@ nav ul li:first-child a {
 .stat-getal {
   font-family: 'Share Tech Mono', monospace;
   font-size: clamp(28px, 4vw, 36px);
-  color: #F4F8FC;
+  color: #0A0E1A;
 }
 
 .stat-label {
