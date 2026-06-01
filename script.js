@@ -1,16 +1,22 @@
 // ── TAAL SYSTEEM ──
 let huidige_taal = 'nl';
- 
+
 function wisselTaal() {
   huidige_taal = huidige_taal === 'nl' ? 'en' : 'nl';
   const knop = document.getElementById('taal-btn');
   if (knop) knop.textContent = huidige_taal === 'nl' ? 'EN' : 'NL';
- 
+
   document.querySelectorAll('[data-nl]').forEach(el => {
     const tekst = el.getAttribute('data-' + huidige_taal);
     if (tekst) el.textContent = tekst;
   });
- 
+
+  document.querySelectorAll('[data-placeholder-nl]').forEach(el => {
+    el.placeholder = huidige_taal === 'nl'
+      ? el.dataset.placeholderNl
+      : el.dataset.placeholderEn;
+  });
+
   document.documentElement.lang = huidige_taal;
 }
  
