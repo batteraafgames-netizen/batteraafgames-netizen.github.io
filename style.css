@@ -112,8 +112,20 @@ nav ul li:first-child a {
   background-color: #0A0E1A;
   padding: 100px 32px 80px;
   border-bottom: 1px solid #1E2A3A;
+  display: grid;                        
+  grid-template-columns: 1fr 1fr;        
+  gap: 40px;                            
+  align-items: center;                
+}
+.hero-rechts {
+  width: 100%;
 }
 
+@media (max-width: 768px) {
+  #hero {
+    grid-template-columns: 1fr;
+  }
+}
 .hero-label {
   font-family: 'Share Tech Mono', monospace;
   font-size: 11px;
@@ -137,6 +149,7 @@ nav ul li:first-child a {
   letter-spacing: 0.2em;
   margin-top: 12px;
 }
+
 
 /* ── STATS ── */
 .stats {
