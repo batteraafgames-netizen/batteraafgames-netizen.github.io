@@ -162,12 +162,6 @@ nav ul li:first-child a {
   text-transform: uppercase;
 }
 
-/* ── SIMULATIE ── */
-/* HOOGTE AANPASSEN: verander 1400px naar wat past op jouw scherm */
-#simulatie iframe {
-  height: 1400px;
-}
-
 /* ── SECTIE LABEL ── */
 .sectie-label {
   font-family: 'Share Tech Mono', monospace;
