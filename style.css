@@ -174,13 +174,13 @@ nav ul li:first-child a {
 /* ── OVER MIJ ── */
 #over-mij {
   padding: 80px 32px;
-  background-color: #F4F8FC;
+  background-color: #0A0E1A; /* Was #F4F8FC -> Nu donker */
 }
 
 #over-mij h2 {
   font-family: 'Share Tech Mono', monospace;
   font-size: clamp(28px, 4vw, 36px);
-  color: #0A0E1A;
+  color: #F4F8FC; /* Was #0A0E1A -> Nu wit */
   margin-bottom: 40px;
 }
 
@@ -229,10 +229,11 @@ nav ul li:first-child a {
   gap: 16px;
 }
 
+/* Zorg dat de paragraaftekst op de donkere achtergrond ook goed leesbaar wordt */
 .over-mij-tekst p {
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
-  color: #1E2A3A;
+  color: #8A9AB0; /* Was #1E2A3A -> Nu lichter grijsblauw */
   line-height: 1.8;
 }
 
@@ -261,7 +262,7 @@ nav ul li:first-child a {
 .detail-val {
   font-family: 'Roboto', sans-serif;
   font-size: 13px;
-  color: #0A0E1A;
+  color: #F4F8FC; /* Was #0A0E1A -> Nu wit */
   font-weight: 400;
   text-align: right;
 }
