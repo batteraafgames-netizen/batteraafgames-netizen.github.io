@@ -52,7 +52,7 @@ nav ul {
 nav ul a {
   font-family: 'Share Tech Mono', monospace;
   font-size: 12px;
-  color: #8A9AB0;
+  color: #F4F8FC;
   text-decoration: none;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -186,14 +186,16 @@ nav ul li:first-child a {
 
 .over-mij-grid {
   display: grid;
-  grid-template-columns: 200px 1fr 280px;
+  grid-template-columns: 400px 1fr 480px;
   gap: 40px;
   align-items: start;
 }
 
-.foto-wrapper {
-  display: flex;
-  justify-content: center;
+.foto-wrapper img {
+  width: 100%;
+  height: auto;
+  max-height: 380px; /* Bepaal hier de gewenste maximale hoogte */
+  object-fit: cover;
 }
 
 .foto-placeholder {
@@ -214,7 +216,7 @@ nav ul li:first-child a {
   font-family: 'Share Tech Mono', monospace;
   font-size: 10px;
   letter-spacing: 0.12em;
-  color: #8A9AB0;
+  color: #F4F8FC;
 }
 
 .foto-placeholder img {
@@ -232,8 +234,8 @@ nav ul li:first-child a {
 /* Zorg dat de paragraaftekst op de donkere achtergrond ook goed leesbaar wordt */
 .over-mij-tekst p {
   font-family: 'Roboto', sans-serif;
-  font-size: 15px;
-  color: #8A9AB0; /* Was #1E2A3A -> Nu lichter grijsblauw */
+  font-size: 17px;
+  color: #F4F8FC; /* Was #1E2A3A -> Nu lichter grijsblauw */
   line-height: 1.8;
 }
 
@@ -357,7 +359,7 @@ nav ul li:first-child a {
 .tijdlijn-beschrijving {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
-  color: #8A9AB0;
+  color: #F4F8FC;
   line-height: 1.75;
 }
 
@@ -447,7 +449,7 @@ nav ul li:first-child a {
 .opleiding-school {
   font-family: 'Roboto', sans-serif;
   font-size: 13px;
-  color: #8A9AB0;
+  color: #F4F8FC;
 }
 
 .certificaten-sectie { margin-top: 48px; }
@@ -531,7 +533,7 @@ nav ul li:first-child a {
 
 .form-groep input::placeholder,
 .form-groep textarea::placeholder {
-  color: #8A9AB0;
+  color: #F4F8FC;
 }
 
 .form-submit {
